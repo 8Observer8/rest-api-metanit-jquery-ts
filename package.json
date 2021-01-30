@@ -1,0 +1,28 @@
+{
+  "name": "rest-api-metanit-jquery-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "tsc -p tsconfigs/tsconfig.debug.json",
+    "compile": "tsc -p tsconfigs/tsconfig.release.json",
+    "bundle": "browserify public/js/main.js -o public/js/bundle.js",
+    "minify": "uglifyjs public/js/bundle.js -o public/js/bundle.min.js",
+    "release": "npm run compile && npm run bundle && npm run minify",
+    "server": "tsc -p tsconfigs/tsconfig.server.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/jquery": "^3.5.5",
+    "@types/requirejs": "^2.1.32"
+  }
+}
